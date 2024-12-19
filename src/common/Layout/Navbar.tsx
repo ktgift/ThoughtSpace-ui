@@ -4,15 +4,10 @@ import { Menus } from "../../constants/menu";
 import { useCommonStore } from "../../stores";
 
 type Props = {
-  // open: boolean;
-  // onClose: () => void;
 };
 
-// export const Navbar = ({ open, onClose }: Props) => {
 export const Navbar = ({}: Props) => {
   const { openMenu, updateOpenMenu } = useCommonStore();
-  const theme = localStorage.getItem("theme") ?? "mytheme";
-  console.log("theme", theme); // TODO fix theme state update slow 1 step
 
   const xsStyle = `absolute top-0 left-0 w-4/5 h-[calc(100vh-2px)] bg-white  shadow-lg transition-all z-100 ${
     openMenu ? "block" : "hidden"
@@ -49,12 +44,11 @@ export const Navbar = ({}: Props) => {
               <li key={index} className="pl-4 py-2 hover:bg-gray-100 flex">
                 {/* TODO change to router dom */}
                 <menu.icon
-                  className={`h-5 mr-3`}
-                  style={{ color: menu.iconColor ?? "black" }}
+                  className={`h-5 mr-3 ${menu.iconColor ? menu.iconColor : "text-base-content"}`}
                 />
                 <a
                   href={menu.route}
-                  className={`flex items-center gap-2 ${theme === "dark" ? "text-white" : "text-black"}`}
+                  className={`flex items-center gap-2 text-base-content`}
                 >
                   {menu.name}
                 </a>
