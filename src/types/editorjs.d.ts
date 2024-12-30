@@ -8,3 +8,4 @@ declare module '@editorjs/simple-image' {
 declare module '@editorjs/text-variant-tune';
 declare module '@editorjs/link';
 declare module '@editorjs/marker';
+declare module '@editorjs/raw';

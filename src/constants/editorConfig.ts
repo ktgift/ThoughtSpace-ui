@@ -3,7 +3,7 @@ import List from '@editorjs/list'
 import Warning from '@editorjs/warning'
 import CodeTool from '@editorjs/code'
 import LinkTool from '@editorjs/link'
-// import RawTool from '@editorjs/raw'
+import RawTool from '@editorjs/raw'
 import Header from '@editorjs/header'
 import Quote from '@editorjs/quote'
 import Marker from '@editorjs/marker'
@@ -77,6 +77,7 @@ export const editorConfig = {
       shortcut: 'CMD+SHIFT+M',
     },
     textVariant: TextVariantTune,
+    raw: RawTool,
     linkTool: {
       class: LinkTool,
       // TODO: doc => https://github.com/editor-js/link
