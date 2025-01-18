@@ -8,8 +8,8 @@ export const Menus: Menu[] = [
     icon: HomeIcon,
   },
   {
-    name: 'Home',
-    route: '/',
+    name: 'Pokemon',
+    route: '/pokemon',
     icon: HomeIcon,
     iconColor: 'text-[#ff8900]',
   },
